@@ -1,35 +1,69 @@
-This is a Next.js project bootstrapped with create-next-app.
+# GM Web Design - Landing Page
 
-Getting Started
-First, run the development server:
+Landing page profissional para serviços de desenvolvimento de sites e landing pages.
 
-npm run dev
+## 🚀 Tecnologias
 
-# or
+- Next.js 15
+- React 18
+- TypeScript
+- Tailwind CSS
+- Lucide React (ícones)
 
-yarn dev
+## 📦 Instalação
 
-# or
+1. Instale as dependências:
+```bash
+bun install
+# ou
+npm install
+```
 
-pnpm dev
-
-# or
-
+2. Execute o servidor de desenvolvimento:
+```bash
 bun dev
-Open http://localhost:3000 with your browser to see the result.
+# ou
+npm run dev
+```
 
-You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.
+3. Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-This project uses next/font to automatically optimize and load Geist, a new font family for Vercel.
+## 🛠️ Scripts Disponíveis
 
-Learn More
-To learn more about Next.js, take a look at the following resources:
+- `bun dev` - Inicia o servidor de desenvolvimento
+- `bun build` - Cria a build de produção
+- `bun start` - Inicia o servidor de produção
+- `bun lint` - Executa o linter
+- `bun format` - Formata o código
 
-Next.js Documentation - learn about Next.js features and API.
-Learn Next.js - an interactive Next.js tutorial.
-You can check out the Next.js GitHub repository - your feedback and contributions are welcome!
+## 📝 Estrutura do Projeto
 
-Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
+```
+lp-davi/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx      # Layout principal
+│   │   ├── page.tsx        # Página principal (landing page)
+│   │   ├── globals.css     # Estilos globais
+│   │   └── ClientBody.tsx  # Componente cliente
+│   └── lib/
+│       └── utils.ts        # Utilitários
+├── package.json
+├── tailwind.config.ts
+└── next.config.js
+```
 
-Check out our Next.js deployment documentation for more details.
+## 🎨 Características
+
+- Design moderno e responsivo
+- Animações suaves
+- Otimizado para SEO
+- Integração com WhatsApp
+- Performance otimizada
+
+## 📱 Contato
+
+- WhatsApp: (31) 99551-8614
+- Instagram: @guimartinsdg
+- Behance: guimartinsdg
+- Email: contato@gmwebdesign.com.br
