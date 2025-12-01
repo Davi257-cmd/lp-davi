@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 8%;
+    --foreground: 180 5% 98%;
+    --card: 210 40% 10%;
+    --card-foreground: 180 5% 98%;
+    --popover: 210 40% 10%;
+    --popover-foreground: 180 5% 98%;
+    --primary: 174 62% 65%;
+    --primary-foreground: 210 40% 8%;
+    --secondary: 210 35% 15%;
+    --secondary-foreground: 180 5% 98%;
+    --muted: 210 30% 20%;
+    --muted-foreground: 180 5% 70%;
+    --accent: 174 62% 65%;
+    --accent-foreground: 210 40% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 180 5% 98%;
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 174 62% 65%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #7dd3c0 0%, #a8e6cf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #1a3e3e 0%, #0a1a1a 50%, #000000 100%);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, #0f2626 0%, #000000 100%);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7dd3c0;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6bc4b0;
+}
