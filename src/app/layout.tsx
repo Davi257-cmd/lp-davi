@@ -32,8 +32,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           src="//unpkg.com/same-runtime/dist/index.global.js"
         />
-        {/* Meta Pixel Code - Pixel 1 (1256997199588643) */}
-        {/* Nota: O pixel 1628129654825342 já está instalado externamente */}
+        {/* Meta Pixel Code - Script direto no head conforme recomendação do Facebook */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -47,6 +46,8 @@ export default function RootLayout({
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '1256997199588643');
               fbq('track', 'PageView');
+              fbq('init', '1628129654825342');
+              fbq('track', 'PageView');
             `,
           }}
         />
@@ -56,6 +57,13 @@ export default function RootLayout({
             width="1" 
             style={{display: 'none'}}
             src="https://www.facebook.com/tr?id=1256997199588643&ev=PageView&noscript=1"
+            alt=""
+          />
+          <img 
+            height="1" 
+            width="1" 
+            style={{display: 'none'}}
+            src="https://www.facebook.com/tr?id=1628129654825342&ev=PageView&noscript=1"
             alt=""
           />
         </noscript>
