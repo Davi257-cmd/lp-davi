@@ -6,8 +6,8 @@ import Script from "next/script";
 export default function CheckoutPage() {
   useEffect(() => {
     // Dispara o evento InitiateCheckout quando a página carregar
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout', {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
         value: 0, // Você pode alterar este valor conforme necessário
         currency: 'BRL'
       });
