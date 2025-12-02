@@ -30,11 +30,17 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { trackInitiateCheckout } from "@/lib/utils";
 
 export default function Home() {
   const whatsappNumber = "5585996827671";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   const whatsappDiagnostico = `https://wa.me/${whatsappNumber}?text=Olá!%20Gostaria%20de%20solicitar%20um%20diagnóstico%20gratuito%20do%20meu%20site.`;
+
+  // Handler para disparar o evento InitiateCheckout
+  const handleInitiateCheckout = (value: number = 0, currency: string = 'BRL') => {
+    trackInitiateCheckout(value, currency);
+  };
 
   return (
     <main className="min-h-screen">
@@ -67,6 +73,7 @@ export default function Home() {
               href={whatsappDiagnostico}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleInitiateCheckout(0, 'BRL')}
               className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105"
             >
               DIAGNÓSTICO GRATUITO
@@ -88,6 +95,7 @@ export default function Home() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => handleInitiateCheckout(0, 'BRL')}
           className="fixed bottom-8 right-8 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-lg hover:scale-110 transition-all z-50"
           aria-label="WhatsApp"
         >
@@ -174,6 +182,7 @@ export default function Home() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleInitiateCheckout(0, 'BRL')}
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary/50 text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all hover:scale-105"
               >
                 Peça sua prévia sem compromisso
@@ -343,6 +352,7 @@ export default function Home() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleInitiateCheckout(0, 'BRL')}
               className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105"
             >
               QUERO MEU SITE PROFISSIONAL
